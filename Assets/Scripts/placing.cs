@@ -22,12 +22,15 @@ public class placing : MonoBehaviour
     {
         if(main.currenttool == "furrow")
         {
-            Debug.Log("Furrow picked");
-            GetComponent<SpriteRenderer>().sprite = furrow1;
-            transform.rotation = Quaternion.Euler(Vector3.forward * -25);
-            m_Collider = GetComponent<BoxCollider2D>();
-            m_Collider.offset =  new Vector2(0.04244328f,0.007222198f);
-            m_Collider.size =  new Vector2(2.423902f,0.4296626f);
+            if(pause.GameIsPaused == false)
+            {
+                Debug.Log("Furrow picked");
+                GetComponent<SpriteRenderer>().sprite = furrow1;
+                transform.rotation = Quaternion.Euler(Vector3.forward * -25);
+                m_Collider = GetComponent<BoxCollider2D>();
+                m_Collider.offset =  new Vector2(0.04244328f,0.007222198f);
+                m_Collider.size =  new Vector2(2.423902f,0.4296626f);
+            }
         }
     } 
 }
