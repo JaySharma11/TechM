@@ -18,8 +18,8 @@ public class ZoomInZoomOut : MonoBehaviour {
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
 
-            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+            Vector3 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector3 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
 
             float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
             float currentMagnitude = (touchZero.position - touchOne.position).magnitude;

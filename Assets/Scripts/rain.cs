@@ -19,6 +19,9 @@ public class rain : MonoBehaviour
 
     public void begin()
     {
-        startrain = true;
+        if(pause.GameIsPaused == false)
+        {
+            startrain = true;
+        }
     }
 }

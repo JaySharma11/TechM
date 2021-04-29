@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class placing : MonoBehaviour
 {
-    public Sprite furrow1;
-    BoxCollider2D m_Collider;
+    public Mesh check_dam;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +21,17 @@ public class placing : MonoBehaviour
     {
         if(main.currenttool == "furrow")
         {
-            Debug.Log("Furrow picked");
-            GetComponent<SpriteRenderer>().sprite = furrow1;
-            transform.rotation = Quaternion.Euler(Vector3.forward * -25);
-            m_Collider = GetComponent<BoxCollider2D>();
-            m_Collider.offset =  new Vector2(0.04244328f,0.007222198f);
-            m_Collider.size =  new Vector2(2.423902f,0.4296626f);
+            if(pause.GameIsPaused == false)
+            {
+                Debug.Log("Furrow placed");
+                main.selectedtool = "topmid";
+                GameObject Score = GameObject.Find(main.selectedtool);
+                MeshFilter currmesh = Score.GetComponent<MeshFilter>();
+                currmesh.sharedMesh = check_dam;
+                gameObject.GetComponent<Transform>().localScale = new Vector3(10,10,10);
+                var boxCollider = GetComponent<BoxCollider>();
+                boxCollider.size = new Vector3(10,5,2);
+            }
         }
     } 
 }

@@ -16,9 +16,12 @@ public class furrow : MonoBehaviour
         
     }
 
-    void OnMouseDown() 
+    public void Selection() 
     {
-        main.currenttool = "furrow";
-        Debug.Log(main.currenttool);
+        if(pause.GameIsPaused == false)
+        {
+            main.currenttool = "furrow";
+            Debug.Log(main.currenttool);
+        }
     }
 }

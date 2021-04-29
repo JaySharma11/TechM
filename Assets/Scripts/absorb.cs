@@ -17,22 +17,14 @@ public class absorb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(c>1 && c<3)
-        {
-             sprite.color = new Color (0, 1, 1, 1);
-        }
-        else if(c>3)
-        {
-            sprite.color = new Color (0, 0, 1, 1);
-            
-            
-        }
+        
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
         c++;
         Destroy(collision.collider.gameObject);
+        Debug.Log("3d Collision");
         if(c!=h && c<4)
         {
             game = FindObjectOfType<points>();

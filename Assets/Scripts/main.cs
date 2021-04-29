@@ -5,6 +5,7 @@ using UnityEngine;
 public class main : MonoBehaviour
 {
     public static string currenttool = "none";
+    public static string selectedtool = "none";
     // Start is called before the first frame update
     void Start()
     {

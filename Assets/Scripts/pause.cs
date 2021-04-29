@@ -27,4 +27,15 @@ public class pause : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
+    public void LoadMenu()
+    {
+        Debug.Log("Loading menu");
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("You can't escape");
+        Application.Quit();
+    }
 }
