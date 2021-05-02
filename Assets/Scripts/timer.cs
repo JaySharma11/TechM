@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
-    public Image loading;
+public Image loading;
  public Text timeText;
  public int minutes;
  public int sec;

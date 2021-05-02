@@ -21,4 +21,13 @@ public class furrow : MonoBehaviour
         main.currenttool = "furrow";
         Debug.Log(main.currenttool);
     }
+
+    public void Shoveldig() 
+    {
+        if(pause.GameIsPaused == false)
+        {
+            main.currenttool = "shovel";
+            Debug.Log(main.currenttool);
+        }
+    }
 }

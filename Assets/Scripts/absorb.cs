@@ -39,11 +39,11 @@ public class absorb : MonoBehaviour
             game.addscore();
             h++;
         }
-        else if(c>3)
-        {
-            game = FindObjectOfType<points>();
-            game.subtractscore();
-        }
+        // else if(c>3)
+        // {
+        //     game = FindObjectOfType<points>();
+        //     game.subtractscore();
+        // }
         
     }
 }
